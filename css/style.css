@@ -32,6 +32,13 @@ body {
 }
 /* ---- Typography ---- */
 
+.container,
+.section {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 /* ---- List Style ---- */
 .navigation-list,
 .address-list,
@@ -41,13 +48,13 @@ body {
   list-style: none;
 }
 
-.section-list-item p {
+/* .section-list-item p {
   width: 264px;
-}
+} */
 /* ---- List Style ---- */
 
 /* ---- Link Style ---- */
-.navigation-list-item a {
+.navigation-list-link {
   text-decoration: none;
   font-weight: 500;
   color: var(--color-navyblue);
@@ -57,27 +64,27 @@ body {
   color: var(--color-ocean);
 }*/
 
-.address-list-item a {
+.address-list-link {
   text-decoration: none;
   font-style: normal;
   color: var(--color-slate);
 }
 
-.navigation-list-item a:hover,
-.navigation-list-item a:focus {
-  color: var(--color-ocean);
-}
-
-.address-list-item a:hover,
-.address-list-item a:focus {
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.navigation-list-link:active,
+.address-list-link:hover,
+.address-list-link:focus,
+.address-list-link:active {
   color: var(--color-ocean);
 }
 /* ---- Link Style ---- */
 
 /* ---- Logo Style ---- */
 .logo {
-  display: flex;
-/*   justify-content: ; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   height: 24px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -98,23 +105,27 @@ body {
 /* --- Header Style --- */
 .body-header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 .navigation-list {
-  display: flex;
-  flex-direction: row;
-  justify-content:left;
+  display: inline-flex;
+  /* flex-direction: row;
+  justify-content: center; */
+  align-items: center;
+  /* margin-left: 76px;
+  margin-right: 332px; */
   gap: 40px;
 }
 
 .address-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  display: inline-flex;
+  /* flex-direction: row; */
+  /* justify-content: flex-start;
+  align-items: center; */
   gap: 40px;
 }
 /* --- Header Style --- */
@@ -294,11 +305,12 @@ body {
   align-items: flex-start;
   justify-content: center;
   background: var(--color-navyblue);
+  padding: 100px 0;
 }
 
 .footnote {
   color: var(--color-cloud);
-  width: 264px;
+  /* width: 264px; */
   letter-spacing: .32px;
 }
 /* --- Footer Style --- */
